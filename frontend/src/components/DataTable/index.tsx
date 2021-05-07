@@ -21,73 +21,73 @@ const DataTable = () => {
                     </tr>
                     <tr>
                         <td>22/04/2021</td>
-                        <td>Barry Allen</td>
+                        <td>Mari</td>
                         <td>34</td>
                         <td>25</td>
-                        <td>15017.00</td>
+                        <td>12517.00</td>
                     </tr>
                     <tr>
                         <td>22/04/2021</td>
-                        <td>Barry Allen</td>
+                        <td>Wellington</td>
                         <td>34</td>
                         <td>25</td>
-                        <td>15017.00</td>
+                        <td>11817.00</td>
                     </tr>
                     <tr>
                         <td>22/04/2021</td>
-                        <td>Barry Allen</td>
+                        <td>Yaskara</td>
                         <td>34</td>
                         <td>25</td>
-                        <td>15017.00</td>
+                        <td>10017.00</td>
                     </tr>
                     <tr>
                         <td>22/04/2021</td>
-                        <td>Barry Allen</td>
+                        <td>Kedma</td>
                         <td>34</td>
                         <td>25</td>
-                        <td>15017.00</td>
+                        <td>9217.00</td>
                     </tr>
                     <tr>
                         <td>22/04/2021</td>
-                        <td>Barry Allen</td>
+                        <td>Michele</td>
                         <td>34</td>
                         <td>25</td>
-                        <td>15017.00</td>
+                        <td>10017.00</td>
                     </tr>
                     <tr>
                         <td>22/04/2021</td>
-                        <td>Barry Allen</td>
+                        <td>Karina</td>
                         <td>34</td>
                         <td>25</td>
-                        <td>15017.00</td>
+                        <td>9877.00</td>
                     </tr>
                     <tr>
                         <td>22/04/2021</td>
-                        <td>Barry Allen</td>
+                        <td>Marcos</td>
                         <td>34</td>
                         <td>25</td>
-                        <td>15017.00</td>
+                        <td>8417.00</td>
                     </tr>
                     <tr>
                         <td>22/04/2021</td>
-                        <td>Barry Allen</td>
+                        <td>Vinicius</td>
                         <td>34</td>
                         <td>25</td>
-                        <td>15017.00</td>
+                        <td>7317.00</td>
                     </tr>
                     <tr>
                         <td>22/04/2021</td>
-                        <td>Barry Allen</td>
+                        <td>Marcia</td>
                         <td>34</td>
                         <td>25</td>
-                        <td>15017.00</td>
+                        <td>6787.00</td>
                     </tr>
                     <tr>
                         <td>22/04/2021</td>
-                        <td>Barry Allen</td>
+                        <td>Celeste</td>
                         <td>34</td>
                         <td>25</td>
-                        <td>15017.00</td>
+                        <td>5047.00</td>
                     </tr>
                 </tbody>
             </table>
