@@ -1,4 +1,32 @@
+
+import axios from "axios";
+import { useEffect } from "react";
+import { useState } from "react";
+import { SalePage } from "types/sale";
+import { formatLocalDate } from "utils/format";
+import { BASE_URL } from "utils/requests";
+
+
+
 const DataTable = () => {
+
+
+    const[page, setPage] = useState<SalePage>({
+        first: true,
+        last: true,
+        number: 0,
+        totalElements: 0,
+        totalPages: 0
+    });
+
+    useEffect(() => {
+        axios.get(`${BASE_URL}/sales?page=0&size=20&sort=date,desc`)
+            .then(response => {
+                setPage(response.data);
+            });
+    }, []);
+
+
     return (
         <div className="table-responsive">
             <table className="table table-striped table-sm">
@@ -12,83 +40,15 @@ const DataTable = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>22/04/2021</td>
-                        <td>Adriana</td>
-                        <td>34</td>
-                        <td>25</td>
-                        <td>15017.00</td>
-                    </tr>
-                    <tr>
-                        <td>22/04/2021</td>
-                        <td>Mari</td>
-                        <td>34</td>
-                        <td>25</td>
-                        <td>12517.00</td>
-                    </tr>
-                    <tr>
-                        <td>22/04/2021</td>
-                        <td>Wellington</td>
-                        <td>34</td>
-                        <td>25</td>
-                        <td>11817.00</td>
-                    </tr>
-                    <tr>
-                        <td>22/04/2021</td>
-                        <td>Yaskara</td>
-                        <td>34</td>
-                        <td>25</td>
-                        <td>10017.00</td>
-                    </tr>
-                    <tr>
-                        <td>22/04/2021</td>
-                        <td>Kedma</td>
-                        <td>34</td>
-                        <td>25</td>
-                        <td>9217.00</td>
-                    </tr>
-                    <tr>
-                        <td>22/04/2021</td>
-                        <td>Michele</td>
-                        <td>34</td>
-                        <td>25</td>
-                        <td>10017.00</td>
-                    </tr>
-                    <tr>
-                        <td>22/04/2021</td>
-                        <td>Karina</td>
-                        <td>34</td>
-                        <td>25</td>
-                        <td>9877.00</td>
-                    </tr>
-                    <tr>
-                        <td>22/04/2021</td>
-                        <td>Marcos</td>
-                        <td>34</td>
-                        <td>25</td>
-                        <td>8417.00</td>
-                    </tr>
-                    <tr>
-                        <td>22/04/2021</td>
-                        <td>Vinicius</td>
-                        <td>34</td>
-                        <td>25</td>
-                        <td>7317.00</td>
-                    </tr>
-                    <tr>
-                        <td>22/04/2021</td>
-                        <td>Marcia</td>
-                        <td>34</td>
-                        <td>25</td>
-                        <td>6787.00</td>
-                    </tr>
-                    <tr>
-                        <td>22/04/2021</td>
-                        <td>Celeste</td>
-                        <td>34</td>
-                        <td>25</td>
-                        <td>5047.00</td>
-                    </tr>
+                    {page.content?.map(item => (
+                             <tr key={item.id}>
+                             <td>{formatLocalDate(item.date, "dd/MM/yyyy")}</td>
+                             <td>{item.seller.name}</td>
+                             <td>{item.visited}</td>
+                             <td>{item.deals}</td>
+                             <td>{item.amount.toFixed(2)}</td>
+                         </tr>
+                    ))}
                 </tbody>
             </table>
         </div>
